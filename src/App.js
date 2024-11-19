@@ -5,7 +5,7 @@ import React, { useState, useEffect } from "react";
 function App() {
   const [data, setData] = useState();
 
-  const testreqest = fetch("https://cu33x54xhe.execute-api.ap-northeast-1.amazonaws.com/dev/")
+  fetch("https://cu33x54xhe.execute-api.ap-northeast-1.amazonaws.com/dev/")
     .then((res) => res.json()) // JSON形式に変換
     .then((json) => setData(json))
     .catch(() => alert("error")); // エラー発生時にアラート
